@@ -1,0 +1,174 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;700&family=Zen+Dots&display=swap");
+
+:root {
+  --lightBlue: #00b5cc;
+  --green: #b2df28;
+  --teal: #00353e;
+
+  --mainFont: "Zen Dots", cursive;
+  --secondFont: "Roboto Mono", monospace;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  background-color: var(--teal);
+  font-family: var(--mainFont);
+}
+
+p {
+  margin: 1rem;
+}
+
+.logoContainer {
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  width: 80%;
+  margin: 3rem auto;
+  cursor: pointer;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 5rem;
+}
+
+input {
+  background: transparent;
+  border: 2px solid var(--green);
+  border-radius: 1rem;
+  padding: 1rem 2rem;
+  width: 30rem;
+  font-size: 2rem;
+  text-align: center;
+  color: var(--lightBlue);
+  height: 5rem;
+}
+
+.searchBtn {
+  padding: 1rem 1rem;
+  font-size: 2rem;
+  border: none;
+  background-color: var(--green);
+  color: var(--teal);
+  border-radius: 0 0 0.5rem 0.5rem;
+  height: 5rem;
+  cursor: pointer;
+}
+
+.searchBtn:hover {
+  background-color: var(--lightBlue);
+}
+
+::placeholder {
+  color: var(--lightBlue);
+}
+
+.buttonsContainer {
+  display: flex;
+  justify-content: center;
+  margin: 4rem;
+}
+
+.paginationBtn {
+  background: transparent;
+  border: 2px solid var(--green);
+  border-radius: 1rem;
+  color: var(--lightBlue);
+  padding: 1rem 2rem;
+  font-size: 2rem;
+  margin: 1rem;
+  cursor: pointer;
+}
+
+.paginationBtn:hover {
+  background-color: var(--green);
+  color: var(--teal);
+}
+
+.charactersGrid {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.characterCard {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--secondFont);
+  font-size: 2rem;
+  text-align: center;
+}
+
+.characterCard img {
+  border-radius: 1rem 1rem 0 0;
+}
+
+.characterInfo {
+  width: 30rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1rem;
+  background-color: var(--lightBlue);
+  border-radius: 0 0 1rem 1rem;
+}
+
+hr {
+  width: 80%;
+  border: 2px solid var(--green);
+  margin-bottom: 1rem;
+}
+
+@media (min-width: 768px) {
+  .charactersGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 60rem);
+  }
+
+  .characterCard {
+    flex-direction: row;
+  }
+
+  .characterCard img {
+    border-radius: 1rem 0 0 1rem;
+  }
+
+  .characterInfo {
+    border-radius: 0 1rem 1rem 0;
+    height: 30rem;
+  }
+
+  input {
+    width: 70rem;
+    border-radius: 1rem 0 0 1rem;
+  }
+
+  form {
+    flex-direction: row;
+  }
+
+  .searchBtn {
+    border-radius: 0 0.5rem 0.5rem 0;
+  }
+
+  .logo {
+    width: 40%;
+  }
+}
