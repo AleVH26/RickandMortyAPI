@@ -49,7 +49,12 @@ export const CharacterGrid = ({ name }) => {
         ))}
       </div>
 
-      <Pagination />
+      <Pagination
+        prev={info.prev}
+        next={info.next}
+        onPrev={onPrev}
+        onNext={onNext}
+      />
     </>
   );
 };
